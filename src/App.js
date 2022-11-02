@@ -1,12 +1,12 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import MainLayout from './components/MainLayout';
+import Post from './components/Pages/Post/Post';
 
 function App() {
   return (
     <div className="App">
-      <MainLayout />
+      <Post />
       <ToastContainer
           position="bottom-right"
           autoClose={2000}

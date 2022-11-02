@@ -1,5 +1,5 @@
 import { styled, alpha } from '@mui/material/styles';
-import {InputBase} from '@mui/material';
+import {InputBase, IconButton} from '@mui/material';
 
 export const BootstrapInput = styled(InputBase)(({ theme }) => ({
     'label + &': {
@@ -72,4 +72,14 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '20ch',
     },
   },
+}));
+
+export const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
 }));
