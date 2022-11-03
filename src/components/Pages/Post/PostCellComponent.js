@@ -24,7 +24,7 @@ function PostCellComponent({children, userAvatar, userName, date, msgAvatar}) {
 
     return (
         <React.Fragment>
-            <Card>
+            <Card sx={{borderRadius: '10px'}}>
                 <CardHeader
                     avatar={
                         <Avatar alt="user_avatar" src={userAvatar} />
@@ -40,7 +40,7 @@ function PostCellComponent({children, userAvatar, userName, date, msgAvatar}) {
                 {children}
                 <CardActions disableSpacing>
                     <Stack direction={'row'} justifyContent={'space-between'} sx={{width: '100%'}}>
-                        <IconButton aria-label="add to favorites">
+                        <IconButton aria-label="add to favorites" color='error'>
                             <FavoriteIcon />
                         </IconButton>
 
@@ -49,11 +49,12 @@ function PostCellComponent({children, userAvatar, userName, date, msgAvatar}) {
                             onClick={handleExpandClick}
                             aria-expanded={expanded}
                             aria-label="show more"
+                            color='success'
                         >
                             <ChatBubbleIcon />
                         </ExpandMore>
 
-                        <IconButton aria-label="share">
+                        <IconButton aria-label="share" color='warning'>
                             <ShareIcon />
                         </IconButton>
                     </Stack>

@@ -18,24 +18,22 @@ function Post() {
         <MainLayout>
             <Box 
                 sx={{
-                    backgroundImage: 'radial-gradient(27% 185%, #F9F6F1 0%, #D7D0C5 100%)',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundAttachment: 'fixed',
+                    backgroundColor: '#f3f2ef',
                     pt: 10,
                     pb: 10
                 }}
             >
-                <Container maxWidth={'lg'}>
+                <Container maxWidth={'md'}>
                     <Grid container rowSpacing={3} columnSpacing={{ xs: 5 }}>
-                        <Grid item xs={12} md={8}>
-                            <Paper elevation={15} sx={{minHeight: '150px', p: 4}}>
+                        <Grid item xs={12} md={12}>
+                            <Paper elevation={15} sx={{minHeight: '150px', p: 4, borderRadius: '10px'}}>
                                 <Typography variant="h4" component='h4' sx={{textAlign: 'left'}}>It's my Profile</Typography>
                             </Paper>
 
-                            <Paper elevation={15} sx={{p: 3, mt: 4}}>
-                                <Divider>
+                            <Paper elevation={15} sx={{p: 3, mt: 4, borderRadius: '10px'}}>
+                                {/* <Divider>
                                     <Chip label={'Create Post'} variant="outlined" color="secondary"  icon={<AddBoxIcon />}></Chip>
-                                </Divider>
+                                </Divider> */}
 
                                 <Stack direction={'row'} justifyContent={'space-between'} sx={{mt: 3}}>
                                     <Avatar alt="user_avatar" src="/images/avatar/3.jpg" sx={{width: 60, height: 60}} />
@@ -55,7 +53,7 @@ function Post() {
                                     </FormControl>
                                 </Stack>
 
-                                <TextField id="filled-basic" label="What's on your Mind, Naymur?..." variant="filled" fullWidth sx={{mt: 3}} />
+                                <TextField id="filled-basic" multiline variant="filled" fullWidth sx={{mt: 3}} />
 
                                 <Stack direction={'row'} justifyContent={'space-between'} sx={{mt: 3}}>
                                     <Button startIcon={<AddPhotoAlternateIcon />} size={'large'} component="label">
@@ -70,7 +68,7 @@ function Post() {
                                 </Stack>
                             </Paper>
 
-                            <Paper elevation={15} sx={{mt: 4}}>
+                            <Paper elevation={15} sx={{mt: 4, borderRadius: '10px'}}>
                                 <PostCellComponent 
                                     userAvatar={'/images/avatar/1.jpg'}
                                     userName={'Steven Hawks'} 
@@ -93,7 +91,7 @@ function Post() {
                                 </PostCellComponent>
                             </Paper>
 
-                            <Paper elevation={15} sx={{mt: 4}}>
+                            <Paper elevation={15} sx={{mt: 4, borderRadius: '10px'}}>
                                 <PostCellComponent 
                                     userAvatar={'/images/avatar/3.jpg'}
                                     userName={'Christopher lee'} 
@@ -114,11 +112,11 @@ function Post() {
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={12} md={4}>
+                        {/* <Grid item xs={12} md={4}>
                             <Paper elevation={15} sx={{minHeight: '600px', p: 4}}>
                                 <Typography variant="h4" component='h4' sx={{textAlign: 'left'}}>Trend</Typography>
                             </Paper>
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                 </Container>
             </Box>
