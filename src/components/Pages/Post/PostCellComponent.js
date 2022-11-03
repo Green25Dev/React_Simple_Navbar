@@ -9,8 +9,8 @@ import {
     Collapse
 } from "@mui/material";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ShareIcon from '@mui/icons-material/Share';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import {ExpandMore} from '../../../consts/style';
@@ -41,7 +41,7 @@ function PostCellComponent({children, userAvatar, userName, date, msgAvatar}) {
                 <CardActions disableSpacing>
                     <Stack direction={'row'} justifyContent={'space-between'} sx={{width: '100%'}}>
                         <IconButton aria-label="add to favorites" color='error'>
-                            <FavoriteIcon />
+                            <FavoriteBorderIcon />
                         </IconButton>
 
                         <ExpandMore
@@ -51,7 +51,7 @@ function PostCellComponent({children, userAvatar, userName, date, msgAvatar}) {
                             aria-label="show more"
                             color='success'
                         >
-                            <ChatBubbleIcon />
+                            <ChatBubbleOutlineIcon />
                         </ExpandMore>
 
                         <IconButton aria-label="share" color='warning'>

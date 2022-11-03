@@ -1,10 +1,9 @@
 import React from "react";
 import {
-    Stack, Box, Container, Chip, Divider, Grid, Paper, Typography, Avatar, Select, MenuItem, FormControl, TextField, Button,
+    Stack, Box, Container, Grid, Paper, Typography, Avatar, Select, MenuItem, FormControl, TextField, Button,
     CardMedia,
     CardContent
 } from "@mui/material";
-import AddBoxIcon from '@mui/icons-material/AddBox';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import MainLayout from "../../MainLayout";
@@ -26,9 +25,9 @@ function Post() {
                 <Container maxWidth={'md'}>
                     <Grid container rowSpacing={3} columnSpacing={{ xs: 5 }}>
                         <Grid item xs={12} md={12}>
-                            <Paper elevation={15} sx={{minHeight: '150px', p: 4, borderRadius: '10px'}}>
+                            {/* <Paper elevation={15} sx={{minHeight: '150px', p: 4, borderRadius: '10px'}}>
                                 <Typography variant="h4" component='h4' sx={{textAlign: 'left'}}>It's my Profile</Typography>
-                            </Paper>
+                            </Paper> */}
 
                             <Paper elevation={15} sx={{p: 3, mt: 4, borderRadius: '10px'}}>
                                 {/* <Divider>
@@ -38,7 +37,7 @@ function Post() {
                                 <Stack direction={'row'} justifyContent={'space-between'} spacing={2} sx={{mt: 3}}>
                                     <Avatar alt="user_avatar" src="/images/avatar/3.jpg" sx={{width: 60, height: 60}} />
                                     <TextField id="outlined-basic" multiline variant="outlined" sx={{mt: 3, width: '70%'}} />
-                                    <FormControl variant="outlined">
+                                    <FormControl variant="standard">
                                         <Select
                                             labelId="demo-simple-select-standard-label"
                                             id="demo-simple-select-standard"
