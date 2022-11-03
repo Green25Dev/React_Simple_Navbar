@@ -35,16 +35,15 @@ function Post() {
                                     <Chip label={'Create Post'} variant="outlined" color="secondary"  icon={<AddBoxIcon />}></Chip>
                                 </Divider> */}
 
-                                <Stack direction={'row'} justifyContent={'space-between'} sx={{mt: 3}}>
+                                <Stack direction={'row'} justifyContent={'space-between'} spacing={2} sx={{mt: 3}}>
                                     <Avatar alt="user_avatar" src="/images/avatar/3.jpg" sx={{width: 60, height: 60}} />
-
-                                    <FormControl variant="standard">
+                                    <TextField id="outlined-basic" multiline variant="outlined" sx={{mt: 3, width: '70%'}} />
+                                    <FormControl variant="outlined">
                                         <Select
                                             labelId="demo-simple-select-standard-label"
                                             id="demo-simple-select-standard"
                                             value={postStatus}
                                             onChange={e=>setPostStatus(e.target.value)}
-                                            label="Age"
                                         >
                                             <MenuItem value={'Public'}>Public</MenuItem>
                                             <MenuItem value={'Friends'}>Friends</MenuItem>
@@ -52,8 +51,6 @@ function Post() {
                                         </Select>
                                     </FormControl>
                                 </Stack>
-
-                                <TextField id="filled-basic" multiline variant="filled" fullWidth sx={{mt: 3}} />
 
                                 <Stack direction={'row'} justifyContent={'space-between'} sx={{mt: 3}}>
                                     <Button startIcon={<AddPhotoAlternateIcon />} size={'large'} component="label">
