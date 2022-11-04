@@ -101,7 +101,7 @@ function Post() {
                                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim beatae totam tempora labore et aut voluptatem? Inventore recusandae itaque, eaque libero, est enim quos iusto totam provident laborum eos suscipit!
                                         </Typography>
                                     </CardContent>
-                                    <video src={'/video/birds.mp4'} width="100%" controls>
+                                    <video src={'/video/2.mp4'} width="100%" controls>
                                         Sorry, your browser doesn't support embedded videos.
                                     </video>
                                 </PostCellComponent>
