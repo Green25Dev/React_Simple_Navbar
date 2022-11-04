@@ -30,7 +30,7 @@ function App() {
             >
               <ThemeProvider theme={themeBackground}>
                   <CssBaseline />
-                  <Route path={'/'}> 
+                  <Route path={'/'} exact> 
                     <Post />
                   </Route>
 
