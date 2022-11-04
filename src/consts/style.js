@@ -1,5 +1,21 @@
 import { styled, alpha } from '@mui/material/styles';
 import {InputBase, IconButton} from '@mui/material';
+import { createTheme } from "@mui/material/styles";
+
+export const themeBackground = createTheme({
+  components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+          //   backgroundColor: "#FAACA8",
+            backgroundImage: `radial-gradient(27% 185%, #F9F6F1 0%, #D7D0C5 100%)`,
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+          },
+        },
+      },
+  }
+});
 
 export const BootstrapInput = styled(InputBase)(({ theme }) => ({
     'label + &': {
